@@ -1,7 +1,10 @@
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(-75deg, #8B0000, #CC338B, #FF000D, #FFA500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-75deg, #ad1457, #c62828, #c62828, #ef6c00);
     background-size: 400% 400%;
     animation: bg 60s ease infinite;
 }
@@ -19,5 +22,17 @@ body {
 }
 
 .title {
+    color: white;
+    margin: 0;
+    font-size: 4em;
+    font-weight: bold;
     font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
+}
+
+.quest-box {
+    background-color: #212121;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
