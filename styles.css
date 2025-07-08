@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-75deg, #8B0000, #CC338B, #FF000D, #FFA500);
+    background-size: 400% 400%;
+    animation: bg 60s ease infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title {
+    font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
+}
