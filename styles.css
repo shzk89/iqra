@@ -29,6 +29,14 @@ body {
     font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
 }
 
+.mean-text {
+    color: white;
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .quest-box {
     background-color: #212121;
     padding: 40px;
