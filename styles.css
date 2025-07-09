@@ -61,3 +61,12 @@ body {
     transform: translateY(4px);
     box-shadow: none;
 }
+
+.next-icon {
+    color: white;
+}
+
+.next-icon svg {
+    width: 56px;
+    height: 64px;
+}
