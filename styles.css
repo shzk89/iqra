@@ -21,7 +21,7 @@ body {
     }
 }
 
-.quest-text {
+.word-text {
     color: white;
     margin: 0;
     font-size: 4em;
@@ -37,10 +37,30 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-.quest-box {
+.main-box {
     background-color: #212121;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.next-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #43a047;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.next-text {
+    color: white;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
 }

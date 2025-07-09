@@ -60,6 +60,12 @@ const means = [
     'it was near'
 ];
 
+let id = 0;
+
+const wordElm = document.querySelector('.word-text');
+const meanElm = document.querySelector('.mean-text');
+const nextElm = document.querySelector('.next-button');
+
 // Fisher-Yates
 function Shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -67,3 +73,12 @@ function Shuffle(array) {
         [array[i], array[randomId]] = [array[randomId], array[i]];
     }
 }
+
+// Next button listener
+nextElm.addEventListener("click", function(){
+    id++;
+    if (id >= words.length) { id = 0; }
+
+    wordElm.textContent = words[id];
+    meanElm.textContent = means[id];
+});
