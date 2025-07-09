@@ -64,7 +64,7 @@ const wordElm = document.querySelector('.word-text');
 const meanElm = document.querySelector('.mean-text');
 const nextElm = document.querySelector('.next-button');
 
-let id = 0;
+let id = -1;
 let ids = [];
 
 // Do stuff
