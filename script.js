@@ -60,10 +60,10 @@ const means = [
     'it was near'
 ];
 
-function Randomize() {
-    const randomId = Math.floor(Math.random() * words.length);
-    document.getElementById('quest-text').textContent = words[randomId];
-    document.getElementById('mean-text').textContent = means[randomId];
+// Fisher-Yates
+function Shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const randomId = Math.floor(Math.random() * (i + 1));
+        [array[i], array[randomId]] = [array[randomId], array[i]];
+    }
 }
-
-Randomize();
