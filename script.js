@@ -62,7 +62,7 @@ const means = [
 
 const wordElm = document.querySelector('.word-text');
 const meanElm = document.querySelector('.mean-text');
-const nextElm = document.querySelector('.next-button');
+const arrowElms = document.querySelectorAll('.arrow-button');
 
 let id = -1;
 let ids = [];
@@ -72,15 +72,23 @@ for (let i = 0; i < words.length; i++) { ids.push(i);}
 Shuffle(ids);
 
 // Next button listener
-nextElm.addEventListener("click", function () {
+arrowElms[0].addEventListener("click", function () {
     id++;
-    if (id >= words.length) {
-        id = 0;
-    }
+    if (id >= words.length) { id = 0; }
+    Update();
+});
 
+// Prev button listener
+arrowElms[1].addEventListener("click", function () {
+    id--;
+    if (id < 0) { id = words.length - 1; }
+    Update();
+})
+
+function Update() {
     wordElm.textContent = words[ids[id]];
     meanElm.textContent = means[ids[id]];
-});
+}
 
 // Fisher-Yates
 function Shuffle(array) {

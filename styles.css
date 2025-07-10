@@ -24,7 +24,7 @@ body {
 .word-text {
     color: white;
     margin: 0;
-    font-size: 4em;
+    font-size: 6em;
     font-weight: bold;
     font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
 }
@@ -32,7 +32,7 @@ body {
 .mean-text {
     color: white;
     margin: 0;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: normal;
     font-family: 'Quicksand', sans-serif;
 }
@@ -45,10 +45,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.next-button {
+.next-box {
     position: fixed;
     bottom: 40px;
     right: 40px;
+}
+
+.prev-box {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+}
+
+.arrow-button {
+    display: block;
     width: 80px;
     height: 80px;
     background-color: #43a047;
@@ -57,16 +67,16 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.next-button:active {
+.arrow-button:active {
     transform: translateY(4px);
     box-shadow: none;
 }
 
-.next-icon {
+.arrow-icon {
     color: white;
 }
 
-.next-icon svg {
+.arrow-icon svg {
     width: 56px;
     height: 64px;
 }
