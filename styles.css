@@ -80,3 +80,20 @@ body {
     width: 56px;
     height: 64px;
 }
+
+.prog-box {
+    background-color: #212121;
+    position: fixed;
+    bottom: 40px;
+    width: 60%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.prog-bar {
+    background-color: #4caf50;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
