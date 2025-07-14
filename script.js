@@ -206,7 +206,7 @@ Shuffle(ids);
 // Next button listener
 arrowElms[0].addEventListener("click", function () {
     id++;
-    if (id >= words.length) { id = words.length - 1; }
+    if (id >= 25) { id = 24; }
     Update();
 });
 
