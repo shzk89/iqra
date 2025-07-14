@@ -168,7 +168,7 @@ arrowElms[1].addEventListener("click", function () {
 function Update() {
     wordElm.textContent = words[ids[id]];
     meanElm.textContent = means[ids[id]];
-    progElm.style.width = (id / (words.length - 1) * 100) + '%';
+    progElm.style.width = (id / (24) * 100) + '%';
 }
 
 // Fisher-Yates
