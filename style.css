@@ -47,13 +47,13 @@ body {
 
 .next-box {
     position: fixed;
-    bottom: 40px;
+    bottom: 80px;
     right: 40px;
 }
 
 .prev-box {
     position: fixed;
-    bottom: 40px;
+    bottom: 80px;
     left: 40px;
 }
 
