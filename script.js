@@ -144,6 +144,8 @@ const meanElm = document.querySelector('.mean-text');
 const progElm = document.querySelector('.prog-bar');
 const arrowElms = document.querySelectorAll('.arrow-button');
 
+const progCount = 24;
+
 let id = -1;
 let ids = [];
 
@@ -154,7 +156,7 @@ Shuffle(ids);
 // Next button listener
 arrowElms[0].addEventListener("click", function () {
     id++;
-    if (id >= 25) { id = 24; }
+    if (id > progCount) { id = progCount; }
     Update();
 });
 
@@ -168,7 +170,7 @@ arrowElms[1].addEventListener("click", function () {
 function Update() {
     wordElm.textContent = words[ids[id]];
     meanElm.textContent = means[ids[id]];
-    progElm.style.width = (id / (24) * 100) + '%';
+    progElm.style.width = (id / (progCount) * 100) + '%';
 }
 
 // Fisher-Yates
