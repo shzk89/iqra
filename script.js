@@ -142,8 +142,8 @@ const means = [
 const wordElm = document.querySelector('.word-text');
 const meanElm = document.querySelector('.mean-text');
 const progElm = document.querySelector('.prog-bar');
-const arrowNextElm = document.getElementById('arrow-next');
-const arrowPrevElm = document.getElementById('arrow-prev');
+const arrowNextElm = document.getElementById('next-arrow');
+const arrowPrevElm = document.getElementById('prev-arrow');
 
 const progCount = 24;
 
