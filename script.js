@@ -157,15 +157,18 @@ Shuffle(ids);
 // Next button listener
 arrowNextElm.addEventListener("click", function () {
     id++;
-    if (id > progCount) { id = progCount; }
     Update();
+    if (id > progCount) { 
+        id = progCount;
+        window.location.assign("done/");
+    }
 });
 
 // Prev button listener
 arrowPrevElm.addEventListener("click", function () {
     id--;
-    if (id < 0) { id = 0; }
     Update();
+    if (id < 0) { id = 0; }
 })
 
 function Update() {
