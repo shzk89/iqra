@@ -22,7 +22,7 @@ body {
 }
 
 .word-text {
-    color: white;
+    color: #e8e8e8;
     margin: 0;
     font-size: 6em;
     font-weight: normal;
@@ -30,7 +30,7 @@ body {
 }
 
 .mean-text {
-    color: white;
+    color: #e8e8e8;
     margin: 0;
     font-size: 1em;
     font-weight: normal;
