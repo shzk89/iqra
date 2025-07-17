@@ -142,7 +142,8 @@ const means = [
 const wordElm = document.querySelector('.word-text');
 const meanElm = document.querySelector('.mean-text');
 const progElm = document.querySelector('.prog-bar');
-const arrowElms = document.querySelectorAll('.arrow-button');
+const arrowNextElm = document.getElementById('arrow-next');
+const arrowPrevElm = document.getElementById('arrow-prev');
 
 const progCount = 24;
 
@@ -154,14 +155,14 @@ for (let i = 0; i < words.length; i++) { ids.push(i);}
 Shuffle(ids);
 
 // Next button listener
-arrowElms[0].addEventListener("click", function () {
+arrowNextElm.addEventListener("click", function () {
     id++;
     if (id > progCount) { id = progCount; }
     Update();
 });
 
 // Prev button listener
-arrowElms[1].addEventListener("click", function () {
+arrowPrevElm.addEventListener("click", function () {
     id--;
     if (id < 0) { id = 0; }
     Update();
