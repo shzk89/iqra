@@ -1,3 +1,9 @@
+:root {
+    --clr-blk: #212121;
+    --clr-wht: #e8e8e8;
+    --clr-grn: #4caf50;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -22,7 +28,7 @@ body {
 }
 
 .word-text {
-    color: #e8e8e8;
+    color: var(--clr-wht);
     margin: 0;
     font-size: 6em;
     font-weight: normal;
@@ -30,7 +36,7 @@ body {
 }
 
 .mean-text {
-    color: #e8e8e8;
+    color: var(--clr-wht);
     margin: 0;
     font-size: 1em;
     font-weight: normal;
@@ -38,7 +44,7 @@ body {
 }
 
 .main-box {
-    background-color: #212121;
+    background-color: var(--clr-blk);
     padding: 40px;
     border-radius: 10px;
     text-align: center;
@@ -61,7 +67,7 @@ body {
     display: block;
     width: 80px;
     height: 80px;
-    background-color: #43a047;
+    background-color: var(--clr-grn);
     border-radius: 50%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -73,7 +79,7 @@ body {
 }
 
 .arrow-icon {
-    color: white;
+    color: var(--clr-wht);
 }
 
 .arrow-icon svg {
@@ -82,7 +88,7 @@ body {
 }
 
 .prog-box {
-    background-color: #212121;
+    background-color: var(--clr-blk);
     position: fixed;
     bottom: 40px;
     width: 60%;
@@ -92,7 +98,7 @@ body {
 }
 
 .prog-bar {
-    background-color: #4caf50;
+    background-color: var(--clr-grn);
     width: 0;
     height: 100%;
     border-radius: 10px;
