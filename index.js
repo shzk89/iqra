@@ -151,25 +151,27 @@ let id = -1;
 let ids = [];
 
 // Do stuff
-for (let i = 0; i < words.length; i++) { ids.push(i);}
+for (let i = 0; i < words.length; i++) { ids.push(i); }
 Shuffle(ids);
 
 // Next button listener
 arrowNextElm.addEventListener("click", function () {
     id++;
-    Update();
     if (id > progCount) { 
         id = progCount;
         window.location.assign("done/");
     }
+
+    Update();
 });
 
 // Prev button listener
 arrowPrevElm.addEventListener("click", function () {
     id--;
-    Update();
     if (id < 0) { id = 0; }
-})
+
+    Update();
+});
 
 function Update() {
     wordElm.textContent = words[ids[id]];
