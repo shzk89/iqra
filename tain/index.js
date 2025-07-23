@@ -1,4 +1,4 @@
-const alphs = [
+const cons = [
     '\u0627', // ا (Alef)
     '\u0628', // ب (Beh)
     '\u062A', // ت (Teh)
@@ -29,15 +29,14 @@ const alphs = [
     '\u064A'  // ي (Yeh)
 ];
 
-const ahs = [
+const vows = [
     '\u064E', // َ (Fathah)
     '\u0650', // ِ (Kasrah)
-    '\u064F'  // ُ (Dammah)
+    '\u064F',  // ُ (Dammah)
+    '\u064B', // ً (Fathatan)
+    '\u064D', // ٍ (Kasratan)
+    '\u064C'  // ٌ (Dammatan)
 ];
-
-const ains = [
-    
-]
 
 const wordElm = document.querySelector('.word-text');
 const progElm = document.querySelector('.prog-bar');
@@ -47,32 +46,43 @@ const arrowPrevElm = document.getElementById('prev-arrow');
 const progCount = 24;
 
 let id = -1;
-let ids = [];
+let conIds = [];
+let vowIds = [];
+
+let score = 0;
 
 // Do stuff
-for (let i = 0; i < alphs.length; i++) { ids.push(i);}
-Shuffle(ids);
+for (let i = 0; i < cons.length; i++) { conIds.push(i); }
+Shuffle(conIds);
+
+for (let i = 0; i < cons.length; i++) { vowIds.push(i % 6); }
+Shuffle(vowIds);
 
 // Next button listener
 arrowNextElm.addEventListener("click", function () {
     id++;
+    if (id >= cons.length) { id = 0; }
+    
+    score++;
+    if (score >= progCount) { score = progCount - 1; }
+    
     Update();
-    if (id > progCount) { 
-        id = progCount;
-        window.location.assign("done/");
-    }
 });
 
 // Prev button listener
 arrowPrevElm.addEventListener("click", function () {
-    id--;
+    id++;
+    if (id >= cons.length) { id = 0; }
+    
+    score--;
+    if (score < 0) { score = 0; }
+    
     Update();
-    if (id < 0) { id = 0; }
-})
+});
 
 function Update() {
-    wordElm.textContent = alphs[ids[id]] + ahs[0];
-    progElm.style.width = (id / (progCount) * 100) + '%';
+    wordElm.textContent = cons[conIds[id]] + vows[vowIds[id]];
+    progElm.style.width = (score / (progCount) * 100) + '%';
 }
 
 // Fisher-Yates
