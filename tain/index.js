@@ -43,13 +43,13 @@ const progElm = document.querySelector('.prog-bar');
 const arrowNextElm = document.getElementById('next-arrow');
 const arrowPrevElm = document.getElementById('prev-arrow');
 
-const progCount = 24;
+const scrCount = 24;
 
 let id = -1;
 let conIds = [];
 let vowIds = [];
 
-let score = 0;
+let scr = 0;
 
 // Do stuff
 for (let i = 0; i < cons.length; i++) { conIds.push(i); }
@@ -63,8 +63,8 @@ arrowNextElm.addEventListener("click", function () {
     id++;
     if (id >= cons.length) { id = 0; }
     
-    score++;
-    if (score >= progCount) { score = progCount - 1; }
+    scr++;
+    if (scr >= scrCount) { scr = scrCount - 1; }
     
     Update();
 });
@@ -74,15 +74,15 @@ arrowPrevElm.addEventListener("click", function () {
     id++;
     if (id >= cons.length) { id = 0; }
     
-    score--;
-    if (score < 0) { score = 0; }
+    scr--;
+    if (scr < 0) { scr = 0; }
     
     Update();
 });
 
 function Update() {
     wordElm.textContent = cons[conIds[id]] + vows[vowIds[id]];
-    progElm.style.width = (score / (progCount) * 100) + '%';
+    progElm.style.width = (scr / (scrCount - 1) * 100) + '%';
 }
 
 // Fisher-Yates
