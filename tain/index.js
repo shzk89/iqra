@@ -40,8 +40,8 @@ const vows = [
 
 const wordElm = document.querySelector('.word-text');
 const progElm = document.querySelector('.prog-bar');
-const arrowNextElm = document.getElementById('next-arrow');
-const arrowPrevElm = document.getElementById('prev-arrow');
+const addBtnElm = document.querySelector('.add-button');
+const subBtnElm = document.querySelector('.sub-button');
 
 const scrCount = 24;
 
@@ -59,7 +59,7 @@ for (let i = 0; i < cons.length; i++) { vowIds.push(i % 6); }
 Shuffle(vowIds);
 
 // Next button listener
-arrowNextElm.addEventListener("click", function () {
+addBtnElm.addEventListener("click", function () {
     id++;
     if (id >= cons.length) { id = 0; }
     
@@ -70,7 +70,7 @@ arrowNextElm.addEventListener("click", function () {
 });
 
 // Prev button listener
-arrowPrevElm.addEventListener("click", function () {
+subBtnElm.addEventListener("click", function () {
     id++;
     if (id >= cons.length) { id = 0; }
     
