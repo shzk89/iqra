@@ -12,22 +12,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-75deg, #ad1457, #c62828, #c62828, #ef6c00);
-    background-size: 400% 400%;
-    animation: bg 60s ease infinite;
 }
 
-@keyframes bg {
+.bg {
+    animation:slide 30s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #c62828 50%, #f9a825 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:40s;
+}
+
+.bg3 {
+    animation-duration:50s;
+}
+
+@keyframes slide {
     0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 100%;
+        transform:translateX(-25%);
     }
     100% {
-        background-position: 0% 50%;
+        transform:translateX(25%);
     }
 }
+
 
 .word-text {
     color: var(--clr-wht);
