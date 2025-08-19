@@ -30,9 +30,9 @@ const cons = [
 ];
 
 const vows = [
-    '\u064E', // َ (Fathah)
-    '\u0650', // ِ (Kasrah)
-    '\u064F',  // ُ (Dammah)
+    // '\u064E', // َ (Fathah)
+    // '\u0650', // ِ (Kasrah)
+    // '\u064F',  // ُ (Dammah)
     '\u064B', // ً (Fathatan)
     '\u064D', // ٍ (Kasratan)
     '\u064C'  // ٌ (Dammatan)
