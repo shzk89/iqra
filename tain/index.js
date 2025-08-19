@@ -43,7 +43,7 @@ const progElm = document.querySelector('.prog-bar');
 const addBtnElm = document.querySelector('.add-button');
 const subBtnElm = document.querySelector('.sub-button');
 
-const scrCount = 24;
+const scrCount = 49;
 
 let id = -1;
 let conIds = [];
