@@ -32,7 +32,7 @@ const cons = [
 const vows = [
     // '\u064E', // َ (Fathah)
     // '\u0650', // ِ (Kasrah)
-    // '\u064F',  // ُ (Dammah)
+    // '\u064F', // ُ (Dammah)
     '\u064B', // ً (Fathatan)
     '\u064D', // ٍ (Kasratan)
     '\u064C'  // ٌ (Dammatan)
@@ -55,7 +55,7 @@ let scr = 0;
 for (let i = 0; i < cons.length; i++) { conIds.push(i); }
 Shuffle(conIds);
 
-for (let i = 0; i < cons.length; i++) { vowIds.push(i % 6); }
+for (let i = 0; i < cons.length; i++) { vowIds.push(i % 3); }
 Shuffle(vowIds);
 
 // Next button listener
@@ -65,8 +65,7 @@ addBtnElm.addEventListener("click", function () {
     
     scr++;
     if (scr >= scrCount) { scr = scrCount - 1; }
-    
-    Update();
+    else { Update(); }
 });
 
 // Prev button listener
@@ -76,8 +75,7 @@ subBtnElm.addEventListener("click", function () {
     
     scr--;
     if (scr < 0) { scr = 0; }
-    
-    Update();
+    else { Update(); }
 });
 
 function Update() {
