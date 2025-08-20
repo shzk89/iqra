@@ -160,17 +160,15 @@ arrowNextElm.addEventListener("click", function () {
     if (id > progCount) { 
         id = progCount;
         window.location.assign("done/");
-    }
+    } else { Update(); }
 
-    Update();
 });
 
 // Prev button listener
 arrowPrevElm.addEventListener("click", function () {
     id--;
     if (id < 0) { id = 0; }
-
-    Update();
+    else { Update(); }
 });
 
 function Update() {

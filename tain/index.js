@@ -64,7 +64,10 @@ addBtnElm.addEventListener("click", function () {
     if (id >= cons.length) { id = 0; }
     
     scr++;
-    if (scr >= scrCount) { scr = scrCount - 1; }
+    if (scr > scrCount) {
+        scr = scrCount;
+        window.location.assign("../done/");
+    }
     else { Update(); }
 });
 
@@ -80,7 +83,7 @@ subBtnElm.addEventListener("click", function () {
 
 function Update() {
     wordElm.textContent = cons[conIds[id]] + vows[vowIds[id]];
-    progElm.style.width = (scr / (scrCount - 1) * 100) + '%';
+    progElm.style.width = (scr / (scrCount) * 100) + '%';
 }
 
 // Fisher-Yates
