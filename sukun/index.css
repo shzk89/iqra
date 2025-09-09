@@ -6,14 +6,6 @@
   --clr-clr: transparent;
 }
 
-body {
-    margin: 0;
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .word-text {
   color: var(--clr-wht);
   margin: 0;
