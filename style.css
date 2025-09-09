@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-75deg, #ad1457, #c62828, #c62828, #ef6c00);
+    background-size: 400% 400%;
+    animation: bg 60s ease infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
