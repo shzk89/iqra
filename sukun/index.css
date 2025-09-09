@@ -1,0 +1,87 @@
+:root {
+  --clr-blk: #212121;
+  --clr-wht: #e8e8e8;
+  --clr-grn: #4caf50;
+  --clr-red: #f44336;
+  --clr-clr: transparent;
+}
+
+body {
+    margin: 0;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.word-text {
+  color: var(--clr-wht);
+  margin: 0;
+  font-size: 6em;
+  font-weight: normal;
+  font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
+}
+
+.main-box {
+  background-color: var(--clr-blk);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-box {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+
+.sub-box {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.add-button {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: var(--clr-clr);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.add-button:active {
+  background-color: var(--clr-grn);
+}
+
+.sub-button {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: var(--clr-clr);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.sub-button:active {
+  background-color: var(--clr-red);
+}
+
+.prog-box {
+  background-color: var(--clr-blk);
+  position: fixed;
+  bottom: 40px;
+  width: 60%;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.prog-bar {
+  background-color: var(--clr-grn);
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
