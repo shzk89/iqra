@@ -135,13 +135,13 @@ const subBtnElm = document.querySelector('.sub-button');
 const scrCount = 24;
 
 let id = -1;
-let wordIds = [];
+let ids = [];
 
 let scr = 0;
 
 // Do stuff
-for (let i = 0; i < words.length; i++) { wordIds.push(i); }
-Shuffle(wordIds);
+for (let i = 0; i < words.length; i++) { ids.push(i); }
+Shuffle(ids);
 
 // Next button listener
 addBtnElm.addEventListener("click", function () {
@@ -167,7 +167,8 @@ subBtnElm.addEventListener("click", function () {
 });
 
 function Update() {
-    wordElm.textContent = words[wordIds[id]];
+    wordElm.textContent = words[ids[id]];
+    meanElm.textContent = means[ids[id]];
     progElm.style.width = (scr / (scrCount) * 100) + '%';
 }
 
