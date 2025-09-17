@@ -14,6 +14,14 @@
   font-family: 'KFGQPC HAFS Uthmanic Script', sans-serif;
 }
 
+.mean-text {
+  color: var(--clr-wht);
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .main-box {
   background-color: var(--clr-blk);
   padding: 40px;
