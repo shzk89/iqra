@@ -1,5 +1,11 @@
 // Some random colors
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+const colors = [
+    "#F44336", 
+    "#9C27B0", 
+    "#2196F3", 
+    "#4CAF50", 
+    "#FFEB3B",
+];
 
 const numBalls = 50;
 const balls = [];
@@ -8,10 +14,9 @@ for (let i = 0; i < numBalls; i++) {
     let ball = document.createElement("div");
     ball.classList.add("ball");
     ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-    ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-    ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-    ball.style.transform = `scale(${Math.random()})`;
-    ball.style.width = `${Math.random()}em`;
+    ball.style.left = `${Math.floor(Math.random() * 80)}vw`;
+    ball.style.top = `${Math.floor(Math.random() * 80)}vh`;
+    ball.style.width = `${5 + (Math.random() * 5)}vw`;
     ball.style.height = ball.style.width;
 
     balls.push(ball);
@@ -19,19 +24,23 @@ for (let i = 0; i < numBalls; i++) {
 }
 
 // Keyframes
-balls.forEach((el, i, ra) => {
-    let to = {
-        x: Math.random() * (i % 2 === 0 ? -11 : 11),
-        y: Math.random() * 12
-    };
+balls.forEach((el, i) => {
+    const rect = el.getBoundingClientRect();
+    const minX = -rect.left; // left boundary
+    const maxX = window.innerWidth - rect.right; // right boundary
+    const minY = -rect.top; // top boundary
+    const maxY = window.innerHeight - rect.bottom; // bottom boundary
 
-    let anim = el.animate(
+    const x = Math.random() * (i % 2 === 0 ? minX : maxX);
+    const y = Math.random() * (i % 2 === 0 ? minY : maxY);
+
+    el.animate(
         [
-            {transform: "translate(0, 0)"},
-            {transform: `translate(${to.x}rem, ${to.y}rem)`}
+            { transform: "translate(0, 0)" },
+            { transform: `translate(${x}px, ${y}px)` }
         ],
         {
-            duration: (Math.random() + 1) * 20000, // random duration
+            duration: (Math.random() + 1) * 2000,
             direction: "alternate",
             fill: "both",
             iterations: Infinity,
@@ -39,3 +48,4 @@ balls.forEach((el, i, ra) => {
         }
     );
 });
+
