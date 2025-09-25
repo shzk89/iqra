@@ -1,10 +1,21 @@
 // Some random colors
 const colors = [
-    "#F44336", 
-    "#9C27B0", 
-    "#2196F3", 
-    "#4CAF50", 
+    "#F44336",
+    "#E91E63",
+    "#9C27B0",
+    "#673AB7",
+    "#3F51B5",
+    "#2196F3",
+    "#03A9F4",
+    "#00BCD4",
+    "#009688",
+    "#4CAF50",
+    "#8BC34A",
+    "#CDDC39",
     "#FFEB3B",
+    "#FFC107",
+    "#FF9800",
+    "#FF5722",
 ];
 
 const numBalls = 50;
@@ -13,7 +24,7 @@ const balls = [];
 for (let i = 0; i < numBalls; i++) {
     let ball = document.createElement("div");
     ball.classList.add("ball");
-    ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+    ball.style.background = colors[i % colors.length];
     ball.style.left = `${Math.floor(Math.random() * 80)}vw`;
     ball.style.top = `${Math.floor(Math.random() * 80)}vh`;
     ball.style.width = `${5 + (Math.random() * 5)}vw`;
