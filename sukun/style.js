@@ -51,7 +51,7 @@ balls.forEach((el, i) => {
             { transform: `translate(${x}px, ${y}px)` }
         ],
         {
-            duration: (Math.random() + 1) * 2000,
+            duration: (Math.random() + 1) * 60000,
             direction: "alternate",
             fill: "both",
             iterations: Infinity,
